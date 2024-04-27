@@ -188,10 +188,10 @@ fi
 
 if ((UPDATE > 0)); then
     if ((VERBOSE > 0)); then echo "Requesting \"$MANAGER\" package update."; fi
-    $SUDO $PKGS_UPDATE
+    $PKGS_UPDATE
 fi
 
 if ((VERBOSE > 0)); then echo "Requesting install of: ${PACKAGES[*]}"; fi
 
 # Install
-$SUDO $MANAGER ${PKGS_OPTIONS[*]} ${PACKAGES[*]}
+$MANAGER ${PKGS_OPTIONS[*]} ${PACKAGES[*]}
